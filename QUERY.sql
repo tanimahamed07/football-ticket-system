@@ -168,14 +168,10 @@ VALUES
   (505, 3, 102, 'C-20', 'Pending', 120.00);
 
 
-SELECT
-  match_id,
-  fixture,
-  round(base_ticket_price)
-FROM
-  Matches
-WHERE
-  tournament_category = 'Champions League'
+SELECT match_id, fixture, base_ticket_price
+FROM Matches
+WHERE tournament_category = 'Champions League' 
+  AND match_status = 'Available';
 
 
 
